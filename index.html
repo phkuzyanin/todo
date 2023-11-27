@@ -13,14 +13,24 @@
 		<h1>Simple todo</h1>
 	</header>
 	<section class="todo__list">
-		<div class="todo__item">
-			<h2>ToDo name</h2>
-			<p>Todo Content</p>
-		</div>
+		<form action="submit" class="todo__item todo__form">
+			<input type="text" id="todo__header" required minlength="1" maxlength="20" size="20" placeholder="Придумайте заголовок!">
+			<textarea id="todo__content" required placeholder="Введите задачу!" rows="10" cols="20" maxlength="200"></textarea>
+			<button type="submit" id="todo__submit">Создать задачу</button>
+		</form>
+		
 	</section>
 	<template>
-		
+	<div class="todo__item">
+		<form action="" class="todo__buttons">
+			<buttons class="completed"><img src="./img/done.svg" alt="completed"></buttons>
+			<buttons class="delete"><img src="./img/delete.svg" alt="delete"></buttons>
+		</form>
+		<h2 class="todo__item-header"></h2>
+		<p class="todo__item-content"></p>
+		</div>
 	</template>
 	</div>
+	<script src="./main.js"></script>
 </body>
 </html>
